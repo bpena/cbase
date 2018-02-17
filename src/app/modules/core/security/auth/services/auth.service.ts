@@ -48,6 +48,16 @@ export class AuthService {
     );
   }
 
+  signInWithEmail(email: string, password: string) {
+    return this.firebaseAuth.auth.signInWithEmailAndPassword(email, password);
+  }
+
+  emailSignUp(email: string, password: string) {
+    return this.firebaseAuth.auth.createUserWithEmailAndPassword(email, password)
+      .then((data) => data.sendEmailVerification())
+      .catch(error => console.log(error));
+  }
+
   isLoggedIn() {
     return this.userDetails != null;
   }

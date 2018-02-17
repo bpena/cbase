@@ -1,19 +1,17 @@
 <mat-card>
   <mat-card-content>
-    <form>
-      <h3 align="center">Login Form</h3>
+    <h3 align="center">Login Form</h3>
 
-      <mat-form-field class="full-width">
-        <input matInput placeholder="Email" value="">
-      </mat-form-field>
+    <mat-form-field class="full-width">
+      <input matInput placeholder="Email" [(ngModel)]="email">
+    </mat-form-field>
 
-      <mat-form-field class="full-width">
-        <input matInput type="password" placeholder="Password">
-      </mat-form-field>
-    </form>
+    <mat-form-field class="full-width">
+      <input matInput type="password" placeholder="Password" [(ngModel)]="password">
+    </mat-form-field>
 
     <div class="form-group">
-      <button mat-raised-button color="primary" class="full-width">Login with email</button>
+      <button mat-raised-button color="primary" class="full-width" (click)="signInWithEmail()">Login with email</button>
     </div>
 
     <div class="separator"></div>
@@ -39,5 +37,7 @@
         Login with Google
       </button>
     </div>
+
+    <a mat-button (click)="gotoRegister()">Register</a>
   </mat-card-content>
 </mat-card>

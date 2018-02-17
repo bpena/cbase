@@ -9,6 +9,9 @@ import { NavigationConstants } from '@shared/constants/navigation.constants';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
+  private email: string;
+  private password: string;
+
   private static logged(that: any) {
     that.ngZone.run(() => that.router.navigateByUrl(NavigationConstants.START_PAGE));
   }
@@ -22,6 +25,12 @@ export class LoginComponent implements OnInit {
               private router: Router) { }
 
   ngOnInit() {
+  }
+
+  signInWithEmail() {
+    this.authService.signInWithEmail(this.email, this.password)
+      .then(() => LoginComponent.logged(this))
+      .catch(LoginComponent.processError);
   }
 
   signInWithTwitter() {
@@ -46,5 +55,9 @@ export class LoginComponent implements OnInit {
     this.authService.signInWithGithub()
       .then(() => LoginComponent.logged(this))
       .catch(LoginComponent.processError);
+  }
+
+  gotoRegister() {
+    this.router.navigate([NavigationConstants.REGISTER_PAGE]);
   }
 }

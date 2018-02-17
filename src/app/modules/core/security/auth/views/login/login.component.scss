@@ -10,6 +10,7 @@
 
     mat-card-content {
       @include flex-column();
+      min-width: 300px;
 
       .button-group {
         justify-content: space-around;

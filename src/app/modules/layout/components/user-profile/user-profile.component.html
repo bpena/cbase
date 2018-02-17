@@ -1,6 +1,7 @@
 <div class="user-profile">
   <div class="admin-user-thumb">
-    <img src="{{ user.photoURL }}" alt="admin">
+    <img *ngIf="user.photoURL" src="{{ user.photoURL }}" alt="admin">
+    <mat-icon *ngIf="!user.photoURL">person</mat-icon>
   </div>
   <div class="admin-user-info">
     <ul>

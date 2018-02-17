@@ -1,6 +1,7 @@
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './views/login/login.component';
 import { AuthComponent } from './auth.component';
+import { RegisterComponent } from '@auth/views/register/register.component';
 
 const ROUTES: Routes = [
   {
@@ -10,6 +11,10 @@ const ROUTES: Routes = [
       {
         path: 'login',
         component: LoginComponent
+      },
+      {
+        path: 'register',
+        component: RegisterComponent
       }
     ]
   }
