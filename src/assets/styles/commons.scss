@@ -1,0 +1,21 @@
+@import "~assets/styles/_variables";
+html {
+  body {
+    .full-width {
+      width: 100%;
+    }
+
+    .separator {
+      flex: 1;
+    }
+
+    .logo {
+      font-size: 32px;
+      text-transform: lowercase;
+
+      span {
+        color: $dark-primary-text;
+      }
+    }
+  }
+}

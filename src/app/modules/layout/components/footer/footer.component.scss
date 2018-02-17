@@ -1,0 +1,6 @@
+@import '~assets/styles/functions';
+:host {
+  @include flex-row();
+  flex: initial;
+  padding: 5px;
+}

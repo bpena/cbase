@@ -1,0 +1,11 @@
+@import '~@angular/material/theming';
+@import "~assets/styles/_variables";
+@import '~assets/styles/functions';
+:host {
+  @include mat-elevation(2);
+  @include flex-row();
+  background-color: $header-background;
+  color: $header-color;
+  flex: initial;
+  padding: 5px;
+}

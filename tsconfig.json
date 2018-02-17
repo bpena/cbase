@@ -8,6 +8,15 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "target": "es5",
+    "baseUrl": "src",
+    "paths": {
+      "@app/*": ["app/*"],
+      "@env/*": ["environments/*"],
+      "@core/*": ["app/modules/core/*"],
+      "@shared/*": ["app/modules/shared/*"],
+      "@layout/*": ["app/modules/layout/*"],
+      "@auth/*": ["app/modules/core/security/auth/*"]
+    },
     "typeRoots": [
       "node_modules/@types"
     ],

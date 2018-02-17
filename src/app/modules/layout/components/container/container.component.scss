@@ -1,0 +1,50 @@
+@import '~assets/styles/_variables';
+@import '~assets/styles/functions';
+:host {
+  @include flex-column();
+
+  .container {
+
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+  }
+
+  .sidenav-container {
+    /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
+       causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
+    flex: 1;
+    overflow: auto;
+
+    .mat-sidenav {
+      &.left {
+        background-color: $sidenav-left-background-color;
+        color: $sidenav-left-text-color;
+        min-width: 170px;
+      }
+
+      &.right {
+        background-color: $sidenav-right-background-color;
+        color: $sidenav-right-text-color;
+        min-width: 270px;
+      }
+    }
+
+    .mat-sidenav-content {
+      padding: 5px;
+    }
+  }
+
+  .is-mobile {
+    overflow: auto;
+    .sidenav-container {
+      /* When the sidenav is fixed, don't constrain the height of the sidenav container. This allows the
+         `<body>` to be our scrolling element for mobile layouts. */
+      flex: 1 0 auto;
+    }
+  }
+
+}
+
+
+

@@ -1,0 +1,9 @@
+@import '~assets/styles/_variables';
+@import '~assets/styles/functions';
+:host {
+  @include flex-column();
+
+  .mat-list-item {
+    color: inherit;
+  }
+}

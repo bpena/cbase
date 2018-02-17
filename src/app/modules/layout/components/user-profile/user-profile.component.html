@@ -1,0 +1,26 @@
+<div class="user-profile">
+  <div class="admin-user-thumb">
+    <img src="{{ user.photoURL }}" alt="admin">
+  </div>
+  <div class="admin-user-info">
+    <ul>
+      <li><a href="#">{{ user.displayName }}</a></li>
+      <li><a href="#">{{ user.email }}</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="admin-bar">
+  <button mat-icon-button (click)="logout()">
+    <mat-icon>power_settings_new</mat-icon>
+  </button>
+  <button mat-icon-button>
+    <mat-icon>person</mat-icon>
+  </button>
+  <button mat-icon-button>
+    <mat-icon>vpn_key</mat-icon>
+  </button>
+  <button mat-icon-button>
+    <mat-icon>settings</mat-icon>
+  </button>
+</div>

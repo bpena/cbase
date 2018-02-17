@@ -1,0 +1,42 @@
+@import "~assets/styles/functions";
+:host {
+  @include flex-column();
+  background-color: #35353b;
+
+  .user-profile {
+    @include flex-row();
+
+    .admin-user-thumb {
+      padding: 15px 0px 15px 15px;
+
+      img {
+        border-radius: 100%;
+        height: 48px;
+        width: 48px;
+      }
+    }
+
+    .admin-user-info {
+      @include flex-column();
+      padding: 15px;
+
+      ul {
+        list-style: none;
+
+        li {
+          a {
+            color: #aaaaaa;
+            font-size: 13px;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+
+  .admin-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}

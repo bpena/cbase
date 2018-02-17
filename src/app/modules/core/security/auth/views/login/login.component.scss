@@ -1,0 +1,19 @@
+@import '~assets/styles/functions';
+:host {
+  @include flex-column();
+
+  mat-card {
+    @include flex-column();
+    flex: initial;
+    margin: auto;
+    max-width: 350px;
+
+    mat-card-content {
+      @include flex-column();
+
+      .button-group {
+        justify-content: space-around;
+      }
+    }
+  }
+}

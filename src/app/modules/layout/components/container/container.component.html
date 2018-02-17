@@ -1,0 +1,17 @@
+<div class="container" [class.is-mobile]="mobileQuery.matches">
+  <mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #lNav [mode]="mobileQuery.matches ? 'over' : 'side'" class="left"
+                 [fixedInViewport]="true" fixedTopGap="50">
+      <left-menu></left-menu>
+    </mat-sidenav>
+
+    <mat-sidenav #rNav mode="over" position="end" class="right"
+                 [fixedInViewport]="true" fixedTopGap="50">
+      <right-menu></right-menu>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
